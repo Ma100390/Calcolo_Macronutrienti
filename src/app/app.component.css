@@ -1,9 +1,21 @@
-
+@import url(https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Whisper&display=swap);
 .content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+}
+h2{
+    color: red;
+    font-weight: bold; 
+    font-family: 'Satisfy';
+    text-shadow: -1px 2px 14px rgb(255, 255, 255);
+}
+h1{
+    font-family: 'Cinzel';
+}
+h3{
+    color: #ffffff;
 }
 
 @keyframes focus-in-expand {
@@ -37,11 +49,16 @@
 }
 
 h5 {
-    /* Applica l'animazione */
+ 
     animation: focus-in-expand 7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    /* Opzionali: aggiungi altri stili per l'h5 */
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: bold;
+    color: #68e600;
+    font-family: 'Edu QLD Beginner';
     margin-top: 20px;
+  }
+
+  .colore{
+    margin: 0 auto;
+    width: 75%;
+ 
+    padding: 5%;
   }

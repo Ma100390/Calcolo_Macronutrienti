@@ -1,6 +1,6 @@
 <div class="content">
     <h1>Simulatore di Alimentazione Nutrizionale</h1>
-    <p>Progettazione & Sviluppo Web di Vetrina Informatica.it</p>
+    <h2>Coach Fitness Massimo Manta</h2>
     <!-- <div class="form-group">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" name="email" required>
@@ -20,8 +20,11 @@
         <input type="number" class="form-control" id="peso" name="peso" [(ngModel)]="peso" required>
     </div>
     <div class="form-group">
-        <label for="age">altezza in cm Es 180</label>
-        <input type="number" class="form-control" id="altezza" name="altezza" [(ngModel)]="altezza" required>
+        <label for="age">Altezza in cm </label>
+        <div class="input-group-append">
+            <input type="number" class="form-control" id="altezza" name="altezza" [(ngModel)]="altezza" required>
+            <span class="input-group-text">Esempio 180</span>
+        </div>
     </div>
     <div class="form-group">
         <label for="gender">Sesso:</label>
@@ -29,11 +32,11 @@
             <option value="">Seleziona</option>
             <option value="male">Maschio</option>
             <option value="female">Femmina</option>
-       
+
         </select>
     </div>
     <div class="form-group">
-        <label for="gender">obiettivo</label>
+        <label for="gender">Obiettivo da conseguire</label>
         <select class="form-control" id="gender" name="gender" [(ngModel)]="obiettivo" required>
             <option value="">Seleziona</option>
             <option value="perdere">Perdere Peso</option>
@@ -53,36 +56,44 @@
             <option value="2">7</option>
         </select>
     </div>
-    <button class="btn btn-primary" (click)="calculateBMI()">Calcola BMI</button>
+    <button class="btn btn-primary" (click)="calculateBMI()">Calcola</button>
 
-    <div *ngIf="resultMessage || resultMessage1 || resultMessage2 || resultMessage3 || resultMessage4 || resultMessage5 || resultMessage6" style="margin-top: 20px;">
-        <p *ngIf="resultMessage" class="result">{{ resultMessage }}</p>
-        <p *ngIf="resultMessage1" class="result">{{ resultMessage1 }}</p>
-        <p *ngIf="resultMessage2" class="result">{{ resultMessage2 }}</p>
-        <p *ngIf="resultMessage3" class="result">{{ resultMessage3 }}</p>
-        <p *ngIf="resultMessage4" class="result">{{ resultMessage4 }}</p>
-        <p *ngIf="resultMessage5" class="result">{{ resultMessage5 }}</p>
-        <p *ngIf="resultMessage6" class="result">{{ resultMessage6 }}</p>
-        <h5>SUCA PIZZARRONE</h5>
-      </div>
-      
+    <div *ngIf="resultMessage || resultMessage1 || resultMessage2 || resultMessage3 || resultMessage4 || resultMessage5 || resultMessage6"
+        style="margin-top: 20px;">
+        <h3 *ngIf="resultMessage" class="result">{{ resultMessage }}</h3>
+        <h3 *ngIf="resultMessage1" class="result">{{ resultMessage1 }}</h3>
+        <h3 *ngIf="resultMessage2" class="result">{{ resultMessage2 }}</h3>
+        <h3 *ngIf="resultMessage3" class="result">{{ resultMessage3 }}</h3>
+        <h3 *ngIf="resultMessage4" class="result">{{ resultMessage4 }}</h3>
+        <h3 *ngIf="resultMessage5" class="result">{{ resultMessage5 }}</h3>
+        <h3 *ngIf="resultMessage6" class="result">{{ resultMessage6 }}</h3>
+        <div class="colore">
+            <h5>Per un risultato più efficente contattami </h5>
+            <a href="https://api.whatsapp.com/send/?phone=33749153947&text=Salve%21+Come+possiamo+aiutarla%3F&type=phone_number&app_absent=0"
+                target="_blank">
+                <img src="assets/whatapp.webp" alt="Collegamento esterno su WhatsApp">
+            </a>
+        </div>
+    </div>
+
 </div>
 <footer class="footer bg-dark text-white">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="footer-section">
-            <h4>Contatti</h4>
-            <p><i class="fas fa-map-marker-alt"></i> Via Esempio, 12345 Città, Italia</p>
-            <p><i class="fas fa-envelope"></i> infoexample.com</p>
-            <p><i class="fas fa-phone"></i> +39 0123456789</p>
-          </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="footer-section">
+                    <h4>Contatti</h4>
+                    <h6><i class="fas fa-map-marker-alt"></i> Via Esempio, 12345 Città, Italia</h6>
+                    <h6><i class="fas fa-envelope"></i> infoexample.com</h6>
+                    <h6><i class="fas fa-phone"></i> +39 0123456789</h6>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
     <div class="text-center py-3">
-        <p> <img class="immagine" src="assets/Senzanome2.webp"
-            alt="LOGO UFFICIALE DI VETRINA INFORMATICA"> <a href="https://www.vetrinainformatica.it" target="_blank" class="text-white">&copy; Vetrina Informatica.Tutti i diritti riservati 2023/2024</a>.
-     </p>
+        <p> <img class="immagine" src="assets/Senzanome2.webp" alt="LOGO UFFICIALE DI VETRINA INFORMATICA"> <a
+                href="https://www.vetrinainformatica.it" target="_blank" class="text-white">&copy; Vetrina
+                Informatica.Tutti i diritti riservati 2023/2024</a>.
+        </p>
     </div>
-  </footer>
+</footer>
