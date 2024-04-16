@@ -1,5 +1,12 @@
 <div class="content">
-    <h1>Simulatore di Alimentazione Nutrizionale</h1>
+    <div class="display-flex">
+        <img class="rota1" src="assets/manubrio.png" alt="Immagine di un Manubrio 3d">
+        <h1>Macro Master</h1>
+        <img class="rota2" src="assets/manubrio.png" alt="Immagine di un Manubrio 3d">
+
+    </div>
+ 
+
     <h2>Coach Fitness Massimo Manta</h2>
     <!-- <div class="form-group">
         <label for="email">Email:</label>
@@ -13,14 +20,20 @@
 
     <div class="form-group">
         <label for="age">Età:</label>
+        <div class="input-group-append">
         <input type="number" class="form-control" id="age" name="age" [(ngModel)]="age" required>
+        <span class="input-group-text">Maggiore di 18 anni </span>
+    </div>
     </div>
     <div class="form-group">
-        <label for="age">Peso</label>
+        <label for="age">Peso:</label>
+        <div class="input-group-append">
         <input type="number" class="form-control" id="peso" name="peso" [(ngModel)]="peso" required>
+                <span class="input-group-text">kg</span>
+                </div>
     </div>
     <div class="form-group">
-        <label for="age">Altezza in cm </label>
+        <label for="age">Altezza in cm: </label>
         <div class="input-group-append">
             <input type="number" class="form-control" id="altezza" name="altezza" [(ngModel)]="altezza" required>
             <span class="input-group-text">Esempio 180</span>
@@ -36,19 +49,20 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="gender">Obiettivo da conseguire</label>
+        <label for="gender">Obiettivo da conseguire:</label>
         <select class="form-control" id="gender" name="gender" [(ngModel)]="obiettivo" required>
             <option value="">Seleziona</option>
-            <option value="perdere">Perdere Peso</option>
-            <option value="nulla">Mantenere Peso</option>
-            <option value="aumentare">Aumentare il Peso</option>
+            <option value="Definizione">Definizione/Perdere Peso</option>
+            <option value="Mantenimento">Mantenere Peso</option>
+            <option value="Massa">Massa/Aumentare il Peso</option>
         </select>
     </div>
 
     <div class="form-group">
-        <label for="gender">Giorni di allenamento</label>
+        <label for="gender">Giorni di allenamento:</label>
         <select class="form-control" id="gender" name="gender" [(ngModel)]="giorni" required>
             <option value="">Seleziona</option>
+            <option value="1.2">0 - 2</option>
             <option value="1.375">3</option>
             <option value="1.55">4</option>
             <option value="1.725">5</option>
@@ -56,19 +70,26 @@
             <option value="2">7</option>
         </select>
     </div>
+   
+    <h6>Questo software a scopo dimostrativo fornisce stime relative al metabolismo basale, al fabbisogno calorico giornaliero, alle calorie e hai macronutrienti consigliati.Gli utenti sono invitati a consultare un professionista qualificato prima di apportare modifiche alla propria dieta o regime di allenamento basate su queste informazioni.
+        I proprietari del software declinano ogni responsabilità per eventuali danni o perdite derivanti dall'uso o dall'incapacità di utilizzare questo software.
+    </h6>
     <button class="btn btn-primary" (click)="calculateBMI()">Calcola</button>
-
     <div *ngIf="resultMessage || resultMessage1 || resultMessage2 || resultMessage3 || resultMessage4 || resultMessage5 || resultMessage6"
-        style="margin-top: 20px;">
-        <h3 *ngIf="resultMessage" class="result">{{ resultMessage }}</h3>
+        style="margin-top: 20px; background-color: #1e2020;">
+        <div *ngIf="resultMessage" class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ resultMessage }}
+            <button type="button" class="btn btn-secondary" (click)="reset()" data-bs-dismiss="modal">x</button>
+          </div>
         <h3 *ngIf="resultMessage1" class="result">{{ resultMessage1 }}</h3>
         <h3 *ngIf="resultMessage2" class="result">{{ resultMessage2 }}</h3>
         <h3 *ngIf="resultMessage3" class="result">{{ resultMessage3 }}</h3>
+        <h3 class="result2">{{ resultMessage7 }}</h3>
         <h3 *ngIf="resultMessage4" class="result">{{ resultMessage4 }}</h3>
         <h3 *ngIf="resultMessage5" class="result">{{ resultMessage5 }}</h3>
         <h3 *ngIf="resultMessage6" class="result">{{ resultMessage6 }}</h3>
         <div class="colore">
-            <h5>Per un risultato più efficente contattami </h5>
+            <h5>&quot;Per maggiori informazioni contattami&quot;</h5>
             <a href="https://api.whatsapp.com/send/?phone=33749153947&text=Salve%21+Come+possiamo+aiutarla%3F&type=phone_number&app_absent=0"
                 target="_blank">
                 <img src="assets/whatapp.webp" alt="Collegamento esterno su WhatsApp">
@@ -78,18 +99,6 @@
 
 </div>
 <footer class="footer bg-dark text-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="footer-section">
-                    <h4>Contatti</h4>
-                    <h6><i class="fas fa-map-marker-alt"></i> Via Esempio, 12345 Città, Italia</h6>
-                    <h6><i class="fas fa-envelope"></i> infoexample.com</h6>
-                    <h6><i class="fas fa-phone"></i> +39 0123456789</h6>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="text-center py-3">
         <p> <img class="immagine" src="assets/Senzanome2.webp" alt="LOGO UFFICIALE DI VETRINA INFORMATICA"> <a
                 href="https://www.vetrinainformatica.it" target="_blank" class="text-white">&copy; Vetrina

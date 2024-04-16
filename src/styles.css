@@ -16,9 +16,7 @@ body {
     color: white; /* Imposta il colore del testo su bianco per una migliore leggibilità */
     font-family: Arial, sans-serif; /* Imposta il carattere del testo */
 }
-.footer {
-    padding: 60px 0;
-  }
+
   
   .footer-section h4 {
     color: #fff;
@@ -60,6 +58,14 @@ body {
     background-color: #343a40 !important;
   }
   .immagine{
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height:100px;
+  }
+  .rota1{
+    rotate: -20deg;
+
+  }
+  .rota2{
+    rotate: 20deg;
+
   }

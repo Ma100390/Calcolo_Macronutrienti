@@ -62,3 +62,11 @@ h5 {
  
     padding: 5%;
   }
+  .display-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .result2{
+    color:#68e600;
+  }
