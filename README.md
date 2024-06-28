@@ -1,3 +1,7 @@
+Questo software a scopo dimostrativo fornisce stime relative al metabolismo basale, al fabbisogno calorico giornaliero, alle calorie e hai macronutrienti consigliati.Gli utenti sono invitati a consultare un professionista qualificato prima di apportare modifiche alla propria dieta o regime di allenamento basate su queste informazioni. I proprietari del software declinano ogni responsabilità per eventuali danni o perdite derivanti dall'uso o dall'incapacità di utilizzare questo software. 
+
+
+
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
